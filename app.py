@@ -81,9 +81,7 @@ total_spend = orders * avg_order_value
 
 
 #if st.button("Predict"):
-predict = st.button(
-    "Predict Customer Insights"
-)
+predict = st.button("Predict Customer Insights")
 
 if predict:
 
@@ -92,10 +90,22 @@ if predict:
 
     st.toast("Insights Ready 🚀", icon="🤖")
 
-    # Data for CLV Model
-    user_data = pd.DataFrame({
+    # Regression Model Input
+
+    regression_data = pd.DataFrame({
 
         "Total_Orders": [orders],
+        "Total_Items": [total_items],
+        "Recency": [recency]
+
+    })
+
+    # KMeans Input
+
+    cluster_data = pd.DataFrame({
+
+        "Total_Orders": [orders],
+        "Total_Spend": [total_spend],
         "Total_Items": [total_items],
         "Recency": [recency]
 
