@@ -86,10 +86,11 @@ predict = st.button(
 )
 
 if predict:
- with st.spinner("Generating AI Insights..."):
-       time.sleep(1)
 
-st.toast("Insights Ready 🚀", icon="🤖")
+    with st.spinner("Generating AI Insights..."):
+        time.sleep(1)
+
+    st.toast("Insights Ready 🚀", icon="🤖")
 
     # Data for CLV Model
     user_data = pd.DataFrame({
