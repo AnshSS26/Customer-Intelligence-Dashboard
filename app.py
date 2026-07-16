@@ -86,7 +86,7 @@ predict = st.button(
 )
 
 if predict:
-    with st.spinner("Generating AI Insights..."):
+ with st.spinner("Generating AI Insights..."):
        time.sleep(1)
 
 st.toast("Insights Ready 🚀", icon="🤖")
